@@ -6,9 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AD18C5421BD250D200C66E99 /* MailSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = AD18C5411BD250D200C66E99 /* MailSignature.m */; };
+		AD25140F1BD26FDB00D8F541 /* Mail Signature.mailbundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD18C5351BD24AEF00C66E99 /* Mail Signature.mailbundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD25140E1BD26FAA00D8F541 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/Mail/Bundles";
+			dstSubfolderSpec = 0;
+			files = (
+				AD25140F1BD26FDB00D8F541 /* Mail Signature.mailbundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AD18C5351BD24AEF00C66E99 /* Mail Signature.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mail Signature.mailbundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD18C5391BD24AEF00C66E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD18C5411BD250D200C66E99 /* MailSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailSignature.m; sourceTree = "<group>"; };
+		AD25140B1BD266E300D8F541 /* MVMessageDisplayNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVMessageDisplayNotifications.h; sourceTree = "<group>"; };
+		ADE181FD1BD25369008F98A2 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
+		ADE182011BD253CD008F98A2 /* MailSignature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MailSignature.h; path = ../../../../../.Trash/MailSignature.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				AD18C5381BD24AEF00C66E99 /* Supporting Files */,
+				ADE182011BD253CD008F98A2 /* MailSignature.h */,
+				ADE181FD1BD25369008F98A2 /* MVMailBundle.h */,
+				AD25140B1BD266E300D8F541 /* MVMessageDisplayNotifications.h */,
+				AD18C5411BD250D200C66E99 /* MailSignature.m */,
 			);
 			path = "Mail Signature";
 			sourceTree = "<group>";
@@ -64,6 +90,7 @@
 				AD18C5311BD24AEF00C66E99 /* Sources */,
 				AD18C5321BD24AEF00C66E99 /* Frameworks */,
 				AD18C5331BD24AEF00C66E99 /* Resources */,
+				AD25140E1BD26FAA00D8F541 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -120,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD18C5421BD250D200C66E99 /* MailSignature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,9 +233,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mail Signature/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(HOME)/Library/Mail/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Debug;
@@ -217,9 +245,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mail Signature/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(HOME)/Library/Mail/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Release;
@@ -243,6 +271,7 @@
 				AD18C53E1BD24AEF00C66E99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
