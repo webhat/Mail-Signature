@@ -17,52 +17,7 @@
  * along with Mail Signature.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-@import WebKit;
-
 #import "MailSignature.h"
-
-@implementation MailSignature
-+ (void)initialize {
-    NSLog(@"Loading MailSignature plugin...");
-    
-    // since 64-bit objective-c runtimes, you apparently can't load
-    // symbols directly (i.e. through class inheritance) and have to
-    // resort to NSClassFromString
-    Class mvMailBundleClass = NSClassFromString(@"MVMailBundle");
-    
-    // If this class is not available that means Mail.app
-    // doesn't allow plugins anymore or has changed the API
-    if (!mvMailBundleClass)
-        return;
-    
-    // dynamically change super class hierarchy
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated"
-    class_setSuperclass([self class], mvMailBundleClass);
-#pragma GCC diagnostic pop
-    
-    // register our plugin bundle in mail
-    [[((MailSignature *)self) class] registerBundle];
-    NSLog(@"Done registering MailSignature plugin.");
-    
-    
-
-    Signature *signature = [[Signature alloc]init];
-    
-
-    WebView *webView = [[WebView alloc] init];
-    WebFrame *webFrame = [webView mainFrame];
-    
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://enroll.oplerno.com/404.html"]];
-    [webFrame loadRequest:urlRequest];
-    
-    WebDataSource *webDataSource = webFrame.dataSource;
-    WebArchive *webArchive = webDataSource.webArchive;
-    //    [signature setWebArchive:webArchive];
-    NSString *someString = [NSString stringWithFormat:@"%@", webArchive.data];
-    NSLog(@"%s", someString);
-}
-@end
 
 @implementation Signature
 
@@ -91,7 +46,7 @@
                                 method_getTypeEncoding(originalMethod));
         } else {
             method_exchangeImplementations(originalMethod, swizzledMethod);
-        }    
+        }
     });
 }
 
@@ -99,11 +54,8 @@
 #pragma mark - Method Swizzling
 
 - (void)xxx_setSignatureContents:(id)arg1 {
-    NSLog(@"setSignatureContents: %@", self);
-    id arg2 = nil;
-    
     [self xxx_setSignatureContents:arg1];
+    
+    NSLog(@"setSignatureContents: %@", self);
 }
 @end
-
-

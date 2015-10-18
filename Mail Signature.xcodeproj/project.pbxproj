@@ -28,9 +28,11 @@
 		AD18C5351BD24AEF00C66E99 /* Mail Signature.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mail Signature.mailbundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD18C5391BD24AEF00C66E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD18C5411BD250D200C66E99 /* MailSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailSignature.m; sourceTree = "<group>"; };
-		AD25140B1BD266E300D8F541 /* MVMessageDisplayNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVMessageDisplayNotifications.h; sourceTree = "<group>"; };
-		ADE181FD1BD25369008F98A2 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
+		AD2514101BD2EA0D00D8F541 /* MVSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVSignature.h; sourceTree = "<group>"; };
+		AD7DCBB51BD4393C00AA29BD /* MVMessageDisplayNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMessageDisplayNotifications.h; sourceTree = "<group>"; };
+		AD7DCBB61BD43A1400AA29BD /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
 		ADE182011BD253CD008F98A2 /* MailSignature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MailSignature.h; path = ../../../../../.Trash/MailSignature.h; sourceTree = "<group>"; };
+		ADFA19291BD418D800867E86 /* MFSynchedFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFSynchedFile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				AD18C5381BD24AEF00C66E99 /* Supporting Files */,
-				ADE182011BD253CD008F98A2 /* MailSignature.h */,
-				ADE181FD1BD25369008F98A2 /* MVMailBundle.h */,
-				AD25140B1BD266E300D8F541 /* MVMessageDisplayNotifications.h */,
+				ADFA192F1BD42E3D00867E86 /* headers */,
 				AD18C5411BD250D200C66E99 /* MailSignature.m */,
 			);
 			path = "Mail Signature";
@@ -78,6 +78,18 @@
 				AD18C5391BD24AEF00C66E99 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADFA192F1BD42E3D00867E86 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				AD7DCBB61BD43A1400AA29BD /* MVMailBundle.h */,
+				AD7DCBB51BD4393C00AA29BD /* MVMessageDisplayNotifications.h */,
+				ADE182011BD253CD008F98A2 /* MailSignature.h */,
+				ADFA19291BD418D800867E86 /* MFSynchedFile.h */,
+				AD2514101BD2EA0D00D8F541 /* MVSignature.h */,
+			);
+			name = headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

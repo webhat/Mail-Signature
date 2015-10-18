@@ -4,6 +4,9 @@
  *     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2010 by Steve Nygard.
  */
 
+#ifndef MV_MAIL_BUNDLE_H
+#define MV_MAIL_BUNDLE_H
+
 #import "MVMessageDisplayNotifications.h"
 
 @interface MVMailBundle : NSObject <MVMessageDisplayNotifications>
@@ -23,3 +26,5 @@
 - (void)_registerBundleForNotifications;
 
 @end
+
+#endif // MV_MAIL_BUNDLE_H
